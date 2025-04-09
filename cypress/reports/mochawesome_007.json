@@ -1,0 +1,200 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 6,
+    "passes": 6,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-02-28T12:25:20.530Z",
+    "end": "2025-02-28T12:26:10.765Z",
+    "duration": 50235,
+    "testsRegistered": 6,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "60b06670-37b7-4dea-affc-6c5f52e3d82c",
+      "title": "",
+      "fullFile": "cypress\\e2e\\visitor Type Category.cy.js",
+      "file": "cypress\\e2e\\visitor Type Category.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d4b6be99-f635-4711-b498-f925c0a40120",
+          "title": "Visitory Categpry Cases",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Visitor Type Category 001- Login and go to Add category Popup   ",
+              "fullTitle": "Visitory Categpry Cases Visitor Type Category 001- Login and go to Add category Popup   ",
+              "timedOut": null,
+              "duration": 12751,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "gotoVisitorCategoryPopup();",
+              "err": {},
+              "uuid": "fdf1f15e-2359-4da0-99d0-8cd3a81f6237",
+              "parentUUID": "d4b6be99-f635-4711-b498-f925c0a40120",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Visitor Type Category 002- Click on x to close   ",
+              "fullTitle": "Visitory Categpry Cases Visitor Type Category 002- Click on x to close   ",
+              "timedOut": null,
+              "duration": 7115,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "gotoVisitorCategoryPopup();\n_signIn.signInObj.closePopup('[class = \"btn btn--small btn--outline btn--transparent close-modal-button\"]');",
+              "err": {},
+              "uuid": "6ef61d5a-0c28-4659-8cfb-c2c14c327741",
+              "parentUUID": "d4b6be99-f635-4711-b498-f925c0a40120",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Visitor Type Category 003- Click on Cancel to close   ",
+              "fullTitle": "Visitory Categpry Cases Visitor Type Category 003- Click on Cancel to close   ",
+              "timedOut": null,
+              "duration": 8037,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "gotoVisitorCategoryPopup();\n_signIn.signInObj.closePopup('[class = \"btn btn--outline close-modal-button\"]');",
+              "err": {},
+              "uuid": "2b5d828b-de90-41c1-971c-55c1245e1cad",
+              "parentUUID": "d4b6be99-f635-4711-b498-f925c0a40120",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Visitor Type Category 004- Adding category skipping Name   ",
+              "fullTitle": "Visitory Categpry Cases Visitor Type Category 004- Adding category skipping Name   ",
+              "timedOut": null,
+              "duration": 6577,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "gotoVisitorCategoryPopup();\ncy.get('#createVisitorCategoryRequest_Name').type(' {backspace}');\ncy.get('#addVisitorCategorySubmit').click();",
+              "err": {},
+              "uuid": "467e1c1b-6252-44bb-acff-1077ecd2d8b5",
+              "parentUUID": "d4b6be99-f635-4711-b498-f925c0a40120",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Visitor Type Category 004- Adding category skipping Name   ",
+              "fullTitle": "Visitory Categpry Cases Visitor Type Category 004- Adding category skipping Name   ",
+              "timedOut": null,
+              "duration": 7991,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "gotoVisitorCategoryPopup();\n_signIn.signInObj.typeNameRandomly('#createVisitorCategoryRequest_Name', NameTyped);\ncy.get('#addVisitorCategorySubmit').click();\ncy.wait(1000);\n// signInObj.deleteAddedVisitorCategory()",
+              "err": {},
+              "uuid": "e8a7ec38-8d20-48bd-ba86-ac109dab4056",
+              "parentUUID": "d4b6be99-f635-4711-b498-f925c0a40120",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Visitor Type Category 004- Deleting Added category skipping Name   ",
+              "fullTitle": "Visitory Categpry Cases Visitor Type Category 004- Deleting Added category skipping Name   ",
+              "timedOut": null,
+              "duration": 6837,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_signIn.signInObj.gotoVisitorCategory();\n_signIn.signInObj.deleteAddedVisitorCategory(NameTyped);\n//signInObj.deleteAddedVisitorCategory()",
+              "err": {},
+              "uuid": "4c9f0382-3712-4574-b26f-9f228a6cb5be",
+              "parentUUID": "d4b6be99-f635-4711-b498-f925c0a40120",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "fdf1f15e-2359-4da0-99d0-8cd3a81f6237",
+            "6ef61d5a-0c28-4659-8cfb-c2c14c327741",
+            "2b5d828b-de90-41c1-971c-55c1245e1cad",
+            "467e1c1b-6252-44bb-acff-1077ecd2d8b5",
+            "e8a7ec38-8d20-48bd-ba86-ac109dab4056",
+            "4c9f0382-3712-4574-b26f-9f228a6cb5be"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 49308,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

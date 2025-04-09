@@ -1,0 +1,219 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 7,
+    "passes": 7,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-04-09T10:36:10.917Z",
+    "end": "2025-04-09T10:36:24.666Z",
+    "duration": 13749,
+    "testsRegistered": 7,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "21f9af63-a7a3-4921-8b8d-ae132c791228",
+      "title": "",
+      "fullFile": "cypress\\e2e\\Login.cy.js",
+      "file": "cypress\\e2e\\Login.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "6f4df2d8-a47e-4528-aa86-e6fd15673e00",
+          "title": "Login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Admin_LOGIN_001 - Login with skipping Tenant field",
+              "fullTitle": "Login Admin_LOGIN_001 - Login with skipping Tenant field",
+              "timedOut": null,
+              "duration": 3953,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://admin-test.mygatepass.com/');\ncy.get('#cookieRequest_Email').type('admin@email.com');\ncy.get('#cookieRequest_Password').type('Password123!');\ncy.get('#loginSubmitButton').click();\ncy.get('#cookieRequest_Tenant-error').should('be.visible').and('contain.text', 'The Tenant field is required.');",
+              "err": {},
+              "uuid": "239a07ea-738f-4515-bcfd-c2bd346bfb69",
+              "parentUUID": "6f4df2d8-a47e-4528-aa86-e6fd15673e00",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Admin_LOGIN_002 - Login with skipping Password field",
+              "fullTitle": "Login Admin_LOGIN_002 - Login with skipping Password field",
+              "timedOut": null,
+              "duration": 1237,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://admin-test.mygatepass.com/');\ncy.get('#cookieRequest_Tenant').type('root');\ncy.get('#cookieRequest_Email').type('admin@email.com');\ncy.get('#loginSubmitButton').click();",
+              "err": {},
+              "uuid": "9658b968-aa65-4867-a949-a7bf163d0cb4",
+              "parentUUID": "6f4df2d8-a47e-4528-aa86-e6fd15673e00",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Admin_LOGIN_003 - Login with skipping Email field",
+              "fullTitle": "Login Admin_LOGIN_003 - Login with skipping Email field",
+              "timedOut": null,
+              "duration": 1098,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://admin-test.mygatepass.com/');\ncy.get('#cookieRequest_Tenant').type('root');\ncy.get('#cookieRequest_Password').type('Password123!');\ncy.get('#loginSubmitButton').click();",
+              "err": {},
+              "uuid": "c00e47a6-faff-4325-b459-65bb22597414",
+              "parentUUID": "6f4df2d8-a47e-4528-aa86-e6fd15673e00",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Admin_LOGIN_004 - Login with wrong Tenant field",
+              "fullTitle": "Login Admin_LOGIN_004 - Login with wrong Tenant field",
+              "timedOut": null,
+              "duration": 1776,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://admin-test.mygatepass.com/');\ncy.get('#cookieRequest_Tenant').type('dummy');\ncy.get('#cookieRequest_Email').type('admin@email.com');\ncy.get('#cookieRequest_Password').type('Password123!');\ncy.get('#loginSubmitButton').click();",
+              "err": {},
+              "uuid": "dba5ae86-e7ee-4b15-8380-75faece12c42",
+              "parentUUID": "6f4df2d8-a47e-4528-aa86-e6fd15673e00",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Admin_LOGIN_005 - Login with wrong Email field",
+              "fullTitle": "Login Admin_LOGIN_005 - Login with wrong Email field",
+              "timedOut": null,
+              "duration": 1507,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://admin-test.mygatepass.com/');\ncy.get('#cookieRequest_Tenant').type('dummy');\ncy.get('#cookieRequest_Email').type('dummyEmail');\ncy.get('#cookieRequest_Password').type('Password123!');\ncy.get('#loginSubmitButton').click();",
+              "err": {},
+              "uuid": "2c077cb4-b104-4792-b2a2-63e62c9ac6af",
+              "parentUUID": "6f4df2d8-a47e-4528-aa86-e6fd15673e00",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Admin_LOGIN_006 - Login with wrong Password field",
+              "fullTitle": "Login Admin_LOGIN_006 - Login with wrong Password field",
+              "timedOut": null,
+              "duration": 1323,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://admin-test.mygatepass.com/');\ncy.get('#cookieRequest_Tenant').type('root');\ncy.get('#cookieRequest_Email').type('admin@email.com');\ncy.get('#cookieRequest_Password').type('asdasdasd');\ncy.get('#loginSubmitButton').click();",
+              "err": {},
+              "uuid": "c21a864e-6371-4cb2-b09c-40143ea5a977",
+              "parentUUID": "6f4df2d8-a47e-4528-aa86-e6fd15673e00",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Admin_LOGIN_007 - Login with Right Credentials",
+              "fullTitle": "Login Admin_LOGIN_007 - Login with Right Credentials",
+              "timedOut": null,
+              "duration": 2494,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_signIn.signInObj.signIn();",
+              "err": {},
+              "uuid": "2a00ef99-8917-410a-9abe-9d0bba36bb12",
+              "parentUUID": "6f4df2d8-a47e-4528-aa86-e6fd15673e00",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "239a07ea-738f-4515-bcfd-c2bd346bfb69",
+            "9658b968-aa65-4867-a949-a7bf163d0cb4",
+            "c00e47a6-faff-4325-b459-65bb22597414",
+            "dba5ae86-e7ee-4b15-8380-75faece12c42",
+            "2c077cb4-b104-4792-b2a2-63e62c9ac6af",
+            "c21a864e-6371-4cb2-b09c-40143ea5a977",
+            "2a00ef99-8917-410a-9abe-9d0bba36bb12"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 13388,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
