@@ -281,6 +281,7 @@ it(' Tenant Config 019 - Go to Provider Configuration', () =>{
 it(' Tenant Config 020 - Click x to Notification Provider popup', () =>{
 
     signInObj.gotoTenantConfiguration()
+    cy.wait(1000)
     cy.get('#notificationConfigurationProvider').click()
     cy.wait(1500)
     cy.get('#addNotificationButton').click()
@@ -293,6 +294,7 @@ it(' Tenant Config 020 - Click x to Notification Provider popup', () =>{
 it(' Tenant Config 021 - Click Cancel to Notification Provider popup', () =>{
 
     signInObj.gotoTenantConfiguration()
+    cy.wait(1000)
     cy.get('#notificationConfigurationProvider').click()
     cy.wait(1500)
     cy.get('#addNotificationButton').click()

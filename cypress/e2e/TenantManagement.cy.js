@@ -58,7 +58,6 @@ it('Tenant Management 005- Adding Tenant skipping Name   ', () => {
     signInObj.SelectRandomDropdownValue('#companyName')
     cy.get('#addTenantSubmit').click()
 
-
 })    
 
 
