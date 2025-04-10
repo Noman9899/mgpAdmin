@@ -25,7 +25,7 @@ steps:
       displayName: 'Run Tests'
       continueOnError: true
   
-  - publish: $(System.DefaultWorkingDirectory)/mochaewomse-report
+  - publish: $(System.DefaultWorkingDirectory)/mochawesome-report
     artifact: Report
     condition: succeededOrFailed()
 
