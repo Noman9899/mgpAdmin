@@ -17,9 +17,18 @@ container: cypress/browsers:latest
 steps:
   - script: |
       npm ci
+      npm install mochawesome
     displayName: 'Installations'
 
   - script: |
-      npx cypress run --browser chrome
-    displayName: 'Run Tests'
+      npx cypress run --browser chrome --reporte mochawesome --reporter-options "reportFilename=chrome-results"
+      displayName: 'Run Tests'
+      continueOnError: true
+  
+  - publish: $(System.DefaultWorkingDirectory)/mochaewomse-report
+    artifact: Report
+    condition: succeededOrFailed()
 
+  - publish: $(System.DefaultWorkingDirectory)/bin/cypress/screenshots
+    artifact: Screenshots 
+    condition: failed()  
