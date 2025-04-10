@@ -6,7 +6,7 @@ function clickingAddGatePopup()
 {
     signInObj.GotoBuildings()
     cy.wait(3000)
-    signInObj.clickButtonRandomly('[class="btn-secondary"]','Gates')
+    signInObj.clickButtonRandomly('.jsgrid-row','Gates')
     cy.get('#addGateButton').click()
 
 
@@ -17,9 +17,9 @@ describe('Gates TestCases', () => {
     it('Gates 001 - Login and Go to Gate Randomly', () => {
         
         
-        signInObj.GotoBuildings()
-        cy.wait(3000)
-        signInObj.clickButtonRandomly('[class="btn-secondary"]','Gates')
+       clickingAddGatePopup()
+
+       
         
 
 })
@@ -70,7 +70,7 @@ it('Gates 005 - Adding Gate while With Name', () =>
 it('Gates 006 - Edit the Gate', () => 
 
 {
-
+    
     clickingAddGatePopup()
     signInObj.typegateNameRandomly('#createGateRequest_Name',"Test Gate ")
     cy.get('#createGateRequest_OpenLockEndPoint').type('1')

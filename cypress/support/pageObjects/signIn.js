@@ -127,6 +127,30 @@ export class signInClass {
 
   }
 
+  goToGlobalConfigurations()
+  {
+
+    this.signIn()
+
+    if (cy.get('#selectLanguage').should('be.visible')) {
+      cy.get('[class="tooltiptext"]').should('exist').contains('Global Configuration').click({ force: true })
+    }
+
+    
+  }
+
+  goToRegion()
+  {
+
+    this.signIn()
+
+    if (cy.get('#selectLanguage').should('be.visible')) {
+      cy.get('[class="tooltiptext"]').should('exist').contains('Region').click({ force: true })
+    }
+
+    
+  }
+
   typeRandomAddress() {
 
 
@@ -400,29 +424,32 @@ export class signInClass {
 
   }
 
-  clickButtonRandomly(locator, btnContains) {
-    // cy.get('tbody tr') // Get all table rows
-    //   .then(($rows) => {
-    //     const rowCount = $rows.length;
+  clickButtonRandomly(rowSelector, btnText) {
+   
+      cy.get(rowSelector).then(($rows) => {
+      const rowCount = $rows.length;
+      const randomIndex = Math.floor(Math.random() * rowCount);
+      const randomRow = $rows.eq(randomIndex);
+      
+      cy.log(`Trying row ${randomIndex + 1} of ${rowCount}`);
+  
+      cy.wrap(randomRow).within(() => {
+        cy.contains(btnText).then(($btn) => {
+          if ($btn.length) {
+            cy.log(`Clicking '${btnText}' in row ${randomIndex + 1}`);
+            cy.wrap($btn).click({ force: true });
+          } else {
+            cy.log(`Row ${randomIndex + 1} does not contain '${btnText}' — skipping`);
+          }
+        });
+      });
+    });
 
 
-    //     const randomRowIndex = Math.floor(Math.random() * rowCount); // Pick a random row
-    //     const selectedRow = cy.wrap($rows.eq(randomRowIndex)); // Select that row
-
-
-    //     selectedRow.find(locator).contains(btnContains).click() // Get all cells in the selected row  
-
-    //   });
-
-
-      cy.get(locator).then(($elements) => {
-        const rowCount = $elements.length;
-        const randomRowIndex = Math.floor(Math.random() * rowCount);
-        cy.wrap($elements.eq(randomRowIndex)).contains(btnContains).click();
-      })
- 
 
   }
+  
+  
 
 
 
@@ -530,6 +557,15 @@ export class signInClass {
     }
 
 
+  }
+
+
+   getRandomVersion() {
+    const major = 2 + Math.floor(Math.random() * 2); // 2 or 3
+    const minor = Math.floor(Math.random() * 10);    // 0 - 9
+    const patch = Math.floor(Math.random() * 10);    // 0 - 9
+  
+    return `${major}.${minor}.${patch}`;
   }
 
 
