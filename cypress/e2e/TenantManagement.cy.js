@@ -103,10 +103,10 @@ it('Tenant Management 008- Adding Tenant skipping Customer   ', () => {
 it('Tenant Management 009- Editing Tenant ', () => {
     signInObj.gotoTenantManagment()
     cy.wait(1000)
-    signInObj.clickButtonRandomlySkippingRoot('[class="btn-secondary"]','Edit')
+    signInObj.clickButtonRandomlySkippingRoot('.jsgrid-row','Edit')
     cy.wait(1000)
     cy.get('#updateTenantRequest_Name').invoke('removeAttr', 'readonly').clear()
-    signInObj.typeNameRandomly('#updateTenantRequest_Name', " ")
+    signInObj.typeNameRandomly('#updateTenantRequest_Name', "Test Tenant ")
     signInObj.SelectRandomDropdownValue('#UpdateRegionSelect')
     signInObj.SelectRandomDropdownValue('#UpdateCustomerSelect')
     signInObj.closePopup('[class = "btn btn--small btn--outline btn--transparent close-modal-button"]')
