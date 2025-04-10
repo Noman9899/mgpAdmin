@@ -1,0 +1,8 @@
+{
+  "devDependencies": {
+    "@faker-js/faker": "^9.5.0",
+    "cypress": "^14.3.0",
+    "cypress-file-upload": "^5.0.8",
+    "mochawesome": "^7.1.3"
+  }
+}

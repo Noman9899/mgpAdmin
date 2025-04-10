@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-02-28T12:14:15.549Z",
+    "end": "2025-02-28T12:14:32.408Z",
+    "duration": 16859,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "d6d7a42d-56b5-4b0f-b32c-9aac7ddb30a6",
+      "title": "",
+      "fullFile": "cypress\\e2e\\Customer Management.cy.js",
+      "file": "cypress\\e2e\\Customer Management.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "64ebcf63-9312-497b-8d95-6af64affb32e",
+          "title": "Customer Management Cases",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Customer Management 015 - Adding Custome",
+              "fullTitle": "Customer Management Cases Customer Management 015 - Adding Custome",
+              "timedOut": null,
+              "duration": 16659,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "gotoCustomerManagementPopup();\n_signIn.signInObj.SelectRandomDropdownValue('#tenantDropdown');\n_signIn.signInObj.SelectRandomDropdownAll('#createRequest_Type');\n_signIn.signInObj.typeNameRandomly('#createRequest_Companyname', 'Test Company ');\n_signIn.signInObj.typeNameRandomly('#createRequest_Address_Street', 'Street ');\n_signIn.signInObj.typeNameRandomly('#createRequest_Address_PostalCode', 'Code ');\n_signIn.signInObj.typeRandomCityStateandCountry();\ncy.get('#createRequest_PrimaryContact_FirstName').type('Noman');\n_signIn.signInObj.typeNameRandomly('#createRequest_PrimaryContact_LastName', 'Customer ');\n_signIn.signInObj.typeNameRandomly('#createRequest_PrimaryContact_Role', 'Role ');\n_signIn.signInObj.typeNameRandomly('#createRequest_PrimaryContact_PhoneNumber', '123123');\n_signIn.signInObj.typeEmailRandomly('#createRequest_PrimaryContact_Email', 'customerEmail');\ncy.get('#addSubmit').click();",
+              "err": {},
+              "uuid": "8d080f89-9f61-4908-bb07-1a09543c5d5c",
+              "parentUUID": "64ebcf63-9312-497b-8d95-6af64affb32e",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "8d080f89-9f61-4908-bb07-1a09543c5d5c"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 16659,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

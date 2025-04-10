@@ -1,0 +1,262 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 9,
+    "passes": 8,
+    "pending": 0,
+    "failures": 1,
+    "start": "2025-04-09T11:21:32.758Z",
+    "end": "2025-04-09T11:22:57.056Z",
+    "duration": 84298,
+    "testsRegistered": 9,
+    "passPercent": 88.88888888888889,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "8362164d-f2a4-4572-af62-9ff3329016b6",
+      "title": "",
+      "fullFile": "cypress\\e2e\\TenantManagement.cy.js",
+      "file": "cypress\\e2e\\TenantManagement.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "df0003bd-a5b6-4300-8444-5add90a9c281",
+          "title": "Tenant Management Cases",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Tenant Management 001- Login and go to Tenant Popup   ",
+              "fullTitle": "Tenant Management Cases Tenant Management 001- Login and go to Tenant Popup   ",
+              "timedOut": null,
+              "duration": 9718,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "clickonAddTenantPopup();",
+              "err": {},
+              "uuid": "fd5546bb-98b9-4acc-a3fc-71e0697dce36",
+              "parentUUID": "df0003bd-a5b6-4300-8444-5add90a9c281",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Tenant Management 002 - Close Tenant popup clicking on x",
+              "fullTitle": "Tenant Management Cases Tenant Management 002 - Close Tenant popup clicking on x",
+              "timedOut": null,
+              "duration": 7059,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "clickonAddTenantPopup();\n_signIn.signInObj.closePopup('[class = \"btn btn--small btn--outline btn--transparent close-modal-button\"]');",
+              "err": {},
+              "uuid": "5ce96757-90df-4829-91ce-a4ceb85e3a0c",
+              "parentUUID": "df0003bd-a5b6-4300-8444-5add90a9c281",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Tenant Management 003 - Close Gates popup clicking on Cancel",
+              "fullTitle": "Tenant Management Cases Tenant Management 003 - Close Gates popup clicking on Cancel",
+              "timedOut": null,
+              "duration": 9296,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "clickonAddTenantPopup();\n_signIn.signInObj.closePopup('[class = \"btn btn--outline close-modal-button\"]');",
+              "err": {},
+              "uuid": "76c06f91-0a6e-451c-bf47-6cdaf3f52892",
+              "parentUUID": "df0003bd-a5b6-4300-8444-5add90a9c281",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Tenant Management 004- Adding Tenant skipping key   ",
+              "fullTitle": "Tenant Management Cases Tenant Management 004- Adding Tenant skipping key   ",
+              "timedOut": null,
+              "duration": 7417,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "clickonAddTenantPopup();\n_signIn.signInObj.typeNameRandomly('#createTenantRequest_Name', \"Testing Tenant \");\n_signIn.signInObj.typeEmailRandomly('#createTenantRequest_AdminEmail', \"tenantemail\");\n_signIn.signInObj.SelectRandomDropdownValue('#RegionSelect');\n_signIn.signInObj.SelectRandomDropdownValue('#companyName');\ncy.get('#addTenantSubmit').click();",
+              "err": {},
+              "uuid": "349ed6fa-9def-4fe1-9782-f2c6ac763136",
+              "parentUUID": "df0003bd-a5b6-4300-8444-5add90a9c281",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Tenant Management 005- Adding Tenant skipping Name   ",
+              "fullTitle": "Tenant Management Cases Tenant Management 005- Adding Tenant skipping Name   ",
+              "timedOut": null,
+              "duration": 8939,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "clickonAddTenantPopup();\n_signIn.signInObj.typeNameRandomly('#createTenantRequest_Id', \"tenantKey\");\n_signIn.signInObj.typeEmailRandomly('#createTenantRequest_AdminEmail', \"tenantemail\");\n_signIn.signInObj.SelectRandomDropdownValue('#RegionSelect');\n_signIn.signInObj.SelectRandomDropdownValue('#companyName');\ncy.get('#addTenantSubmit').click();",
+              "err": {},
+              "uuid": "a8b16733-50f3-4bff-a88a-173b1e566181",
+              "parentUUID": "df0003bd-a5b6-4300-8444-5add90a9c281",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Tenant Management 006- Adding Tenant skipping Email   ",
+              "fullTitle": "Tenant Management Cases Tenant Management 006- Adding Tenant skipping Email   ",
+              "timedOut": null,
+              "duration": 8905,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "clickonAddTenantPopup();\n_signIn.signInObj.typeNameRandomly('#createTenantRequest_Id', \"tenantKey\");\n_signIn.signInObj.typeNameRandomly('#createTenantRequest_Name', \"Testing Tenant \");\n_signIn.signInObj.SelectRandomDropdownValue('#RegionSelect');\n_signIn.signInObj.SelectRandomDropdownValue('#companyName');\ncy.get('#addTenantSubmit').click();",
+              "err": {
+                "message": "CypressError: `cy.select()` must be passed a string, number, or array as its 1st argument. You passed: `undefined`.\n\nhttps://on.cypress.io/select",
+                "estack": "CypressError: `cy.select()` must be passed a string, number, or array as its 1st argument. You passed: `undefined`.\n\nhttps://on.cypress.io/select\n    at Context.select (https://admin-test.mygatepass.com/__cypress/runner/cypress_runner.js:114202:70)\n    at wrapped (https://admin-test.mygatepass.com/__cypress/runner/cypress_runner.js:140158:19)\n    at <unknown> (https://admin-test.mygatepass.com/__cypress/runner/cypress_runner.js:146103:15)\n    at tryCatcher (https://admin-test.mygatepass.com/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise._settlePromiseFromHandler (https://admin-test.mygatepass.com/__cypress/runner/cypress_runner.js:1489:31)\n    at Promise._settlePromise (https://admin-test.mygatepass.com/__cypress/runner/cypress_runner.js:1546:18)\n    at Promise._settlePromiseCtx (https://admin-test.mygatepass.com/__cypress/runner/cypress_runner.js:1583:10)\n    at _drainQueueStep (https://admin-test.mygatepass.com/__cypress/runner/cypress_runner.js:2381:12)\n    at _drainQueue (https://admin-test.mygatepass.com/__cypress/runner/cypress_runner.js:2370:9)\n    at Async._drainQueues (https://admin-test.mygatepass.com/__cypress/runner/cypress_runner.js:2386:5)\n    at Async.drainQueues (https://admin-test.mygatepass.com/__cypress/runner/cypress_runner.js:2256:14)",
+                "diff": null
+              },
+              "uuid": "112017f9-1163-4e8b-9863-76f5b04a8016",
+              "parentUUID": "df0003bd-a5b6-4300-8444-5add90a9c281",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Tenant Management 007- Adding Tenant skipping Region   ",
+              "fullTitle": "Tenant Management Cases Tenant Management 007- Adding Tenant skipping Region   ",
+              "timedOut": null,
+              "duration": 9979,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "clickonAddTenantPopup();\n_signIn.signInObj.typeNameRandomly('#createTenantRequest_Id', \"tenantKey\");\n_signIn.signInObj.typeNameRandomly('#createTenantRequest_Name', \"Testing Tenant \");\n_signIn.signInObj.typeEmailRandomly('#createTenantRequest_AdminEmail', \"tenantemail\");\n_signIn.signInObj.SelectRandomDropdownValue('#companyName');\ncy.get('#addTenantSubmit').click();",
+              "err": {},
+              "uuid": "8a751e7d-1aac-4363-8411-976740d4fa39",
+              "parentUUID": "df0003bd-a5b6-4300-8444-5add90a9c281",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Tenant Management 008- Adding Tenant skipping Customer   ",
+              "fullTitle": "Tenant Management Cases Tenant Management 008- Adding Tenant skipping Customer   ",
+              "timedOut": null,
+              "duration": 8453,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "clickonAddTenantPopup();\n_signIn.signInObj.typeNameRandomly('#createTenantRequest_Id', \"tenantKey\");\n_signIn.signInObj.typeNameRandomly('#createTenantRequest_Name', \"Testing Tenant \");\n_signIn.signInObj.typeEmailRandomly('#createTenantRequest_AdminEmail', \"tenantemail\");\n_signIn.signInObj.SelectRandomDropdownValue('#RegionSelect');\ncy.get('#addTenantSubmit').click();",
+              "err": {},
+              "uuid": "a24fe68c-2666-4498-8a87-2ff4a1b7e96f",
+              "parentUUID": "df0003bd-a5b6-4300-8444-5add90a9c281",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Tenant Management 009- Editing Tenant ",
+              "fullTitle": "Tenant Management Cases Tenant Management 009- Editing Tenant ",
+              "timedOut": null,
+              "duration": 13539,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_signIn.signInObj.gotoTenantManagment();\ncy.wait(1000);\n_signIn.signInObj.clickButtonRandomlySkippingRoot('[class=\"btn-secondary\"]', 'Edit');\ncy.wait(1000);\ncy.get('#updateTenantRequest_Name').invoke('removeAttr', 'readonly').clear();\n_signIn.signInObj.typeNameRandomly('#updateTenantRequest_Name', \" \");\n_signIn.signInObj.SelectRandomDropdownValue('#UpdateRegionSelect');\n_signIn.signInObj.SelectRandomDropdownValue('#UpdateCustomerSelect');\n_signIn.signInObj.closePopup('[class = \"btn btn--small btn--outline btn--transparent close-modal-button\"]');",
+              "err": {},
+              "uuid": "06b84f8d-f6a6-4003-b758-07b16aa9719b",
+              "parentUUID": "df0003bd-a5b6-4300-8444-5add90a9c281",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "fd5546bb-98b9-4acc-a3fc-71e0697dce36",
+            "5ce96757-90df-4829-91ce-a4ceb85e3a0c",
+            "76c06f91-0a6e-451c-bf47-6cdaf3f52892",
+            "349ed6fa-9def-4fe1-9782-f2c6ac763136",
+            "a8b16733-50f3-4bff-a88a-173b1e566181",
+            "8a751e7d-1aac-4363-8411-976740d4fa39",
+            "a24fe68c-2666-4498-8a87-2ff4a1b7e96f",
+            "06b84f8d-f6a6-4003-b758-07b16aa9719b"
+          ],
+          "failures": [
+            "112017f9-1163-4e8b-9863-76f5b04a8016"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 83305,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
