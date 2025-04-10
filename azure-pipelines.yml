@@ -29,6 +29,6 @@ steps:
     artifact: Report
     condition: succeededOrFailed()
 
-  - publish: $(System.DefaultWorkingDirectory)/bin/cypress/screenshots
+  - publish: $(System.DefaultWorkingDirectory)/cypress/screenshots
     artifact: Screenshots 
-    condition: failed()  
+    condition: failed()
