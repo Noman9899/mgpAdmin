@@ -21,7 +21,7 @@ steps:
     displayName: 'Installations'
 
   - script: |
-      npx cypress run --browser chrome --reporte mochawesome --reporter-options "reportFilename=chrome-results"
+      npx cypress run --browser chrome --reporter mochawesome --reporter-options "reportFilename=chrome-results"
       displayName: 'Run Tests'
       continueOnError: true
   
