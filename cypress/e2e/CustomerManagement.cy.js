@@ -263,7 +263,7 @@ describe('Customer Management Cases', () => {
     })
 
 
-    it.only('Customer Management 015 - Adding Custome', () => {
+    it('Customer Management 015 - Adding Custome', () => {
 
         gotoCustomerManagementPopup()
         signInObj.SelectRandomDropdownValue('#tenantDropdown')
