@@ -156,7 +156,7 @@ it('Global Configurations 008 - Adding while skipping Visitor app Version', () =
 
 it('Global Configurations 008 - Adding while skipping Security app Version', () => {
 
-
+    
     signInObj.goToGlobalConfigurations()
     cy.get('#addTenantButton').click()
     cy.wait(1000)

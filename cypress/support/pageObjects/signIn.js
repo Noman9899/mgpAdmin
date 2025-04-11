@@ -95,7 +95,7 @@ export class signInClass {
 
     this.signIn()
 
-    if (cy.get('#selectLanguage').should('be.visible')) {
+    if (cy.get('[id="selectLanguage"] select').should('be.visible')) {
       cy.get('[class="tooltiptext"]').should('exist').contains('User Management').click({ force: true })
     }
 
@@ -107,7 +107,7 @@ export class signInClass {
     this.signIn()
 
 
-    if (cy.get('#selectLanguage').should('be.visible')) {
+    if (cy.get('[id="selectLanguage"] select').should('be.visible')) {
       cy.get('[class="tooltiptext"]').should('exist').contains('Buildings').click({ force: true })
     }
 
@@ -121,7 +121,7 @@ export class signInClass {
     this.signIn()
 
 
-    if (cy.get('#selectLanguage').should('be.visible')) {
+    if (cy.get('[id="selectLanguage"] select').should('be.visible')) {
       cy.get('[class="tooltiptext"]').should('exist').contains('Tenant configuration').click({ force: true })
     }
 
@@ -132,7 +132,7 @@ export class signInClass {
 
     this.signIn()
 
-    if (cy.get('#selectLanguage').should('be.visible')) {
+    if (cy.get('[id="selectLanguage"] select').should('be.visible')) {
       cy.get('[class="tooltiptext"]').should('exist').contains('Global Configuration').click({ force: true })
     }
 
@@ -144,7 +144,7 @@ export class signInClass {
 
     this.signIn()
 
-    if (cy.get('#selectLanguage').should('be.visible')) {
+    if (cy.get('[id="selectLanguage"] select').should('be.visible')) {
       cy.get('[class="tooltiptext"]').should('exist').contains('Region').click({ force: true })
     }
 
@@ -354,9 +354,9 @@ export class signInClass {
   SelectRandomDropdownValue(locator) {
 
 
-    //cy.get('.checkbox-group__label__text__title').contains('G4 Johar').click()  // Specific checkbox clicking
+    
 
-    cy.get(locator) // Select all checkboxes
+   /* cy.get(locator) // Select all checkboxes
       .then(($select) => {
         const options = $select.find('option:not(:first)');
         const numberToClick = Math.floor(Math.random() * options.length);
@@ -364,7 +364,27 @@ export class signInClass {
         cy.get(locator).select(randomValue)
 
 
+      });  */
+
+
+      cy.get(locator)
+      .should('exist')
+      .should(($select) => {
+        // Wait until at least 2 options (e.g., first is placeholder, second is valid)
+        expect($select.find('option').length).to.be.greaterThan(1);
+      })
+      .then(($select) => {
+        const options = $select.find('option:not(:first)');
+        const totalOptions = options.length;
+    
+        const numberToClick = Math.floor(Math.random() * totalOptions);
+        const randomValue = options.eq(numberToClick).val();
+    
+        cy.log(`Selecting value: ${randomValue} from ${totalOptions} options`);
+        cy.get(locator).select(randomValue);
       });
+    
+      
 
   }
 
@@ -530,7 +550,7 @@ export class signInClass {
   gotoTenantManagment() {
     this.signIn()
 
-    if (cy.get('#selectLanguage').should('be.visible')) {
+    if (cy.get('[id="selectLanguage"] select').should('be.visible')) {
       cy.get('[class="tooltiptext"]').should('exist').contains('Tenant Management').click({ force: true })
     }
 
@@ -541,7 +561,7 @@ export class signInClass {
   {
     this.signIn()
 
-    if (cy.get('.right-half > .card > h3').should('be.visible')) {
+    if (cy.get('[id="selectLanguage"] select').should('be.visible')) {
       cy.get('[class="tooltiptext"]').should('exist').contains('Visitor Type Category').click({ force: true })
     }
 
@@ -552,7 +572,7 @@ export class signInClass {
   {
     this.signIn()
 
-    if (cy.get('.right-half > .card > h3').should('be.visible')) {
+    if (cy.get('[id="selectLanguage"] select').should('be.visible')) {
       cy.get('[class="tooltiptext"]').should('exist').contains('Customer Management').click({ force: true })
     }
 
