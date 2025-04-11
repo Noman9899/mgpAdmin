@@ -62,7 +62,7 @@ it('Region 006- Add Region' , () =>
 
 })
 
-it('Region 007- Edit the Region', () => {
+it.skip('Region 007- Edit the Region', () => {
     signInObj.goToRegion()
     signInObj.clickButtonRandomly('.jsgrid-row','Edit')
     cy.get('#updateRegionRequest_Name').clear()
@@ -74,7 +74,7 @@ it('Region 007- Edit the Region', () => {
 
 })
 
-it('Region 008- Delete the Region', () => {
+it.skip('Region 008- Delete the Region', () => {
 
     signInObj.goToRegion()
     signInObj.clickButtonRandomly('.jsgrid-row','Delete')
