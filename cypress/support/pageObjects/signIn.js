@@ -426,7 +426,7 @@ export class signInClass {
     cy.get('#manageVisitorTypes').contains('Manage Visitor Types').click()
     cy.wait(500)
     cy.get('#addVisitorTypeButton').click()
-
+    
   }
 
 

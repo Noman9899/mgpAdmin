@@ -171,7 +171,7 @@ it('Global Configurations 008 - Adding while skipping Security app Version', () 
     cy.get('#createRequest_VisitorAppMinVersion').type(version)
     signInObj.clicktheCheckBox('#createRequest_OffersEnabled')
     cy.get('#addRegionSubmit').click()
-    
+      
 })
 
 

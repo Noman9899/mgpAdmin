@@ -253,7 +253,7 @@ it(' Tenant Config 017 - Adding Visitor Type while skipping Parent', () =>{
 
 
 
-it(' Tenant Config 018 - Adding Visitor Type whith all fields', () =>{
+it.only(' Tenant Config 018 - Adding Visitor Type whith all fields', () =>{
 
     signInObj.gotoTenantConfiguration()
     cy.wait(1000)
@@ -263,9 +263,7 @@ it(' Tenant Config 018 - Adding Visitor Type whith all fields', () =>{
     signInObj.SelectRandomDropdownValue('#visitorTypeCategory')
     
    cy.get('#addVisitorTypeSubmit').click()
-    cy.wait(1000)
-    signInObj.deleteSubCategrory()
-    cy.wait(500)
+   cy.wait(1000)
    signInObj.deleteCategory()
 
 
