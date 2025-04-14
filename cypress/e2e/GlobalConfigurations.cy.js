@@ -15,7 +15,7 @@ it('Global Configurations 002 - Click on Global Configuraton button', () => {
 
 })
 
-it('Global Configurations 002 - Click x to close popup', () => {
+it('Global Configurations 003 - Click x to close popup', () => {
         
     signInObj.goToGlobalConfigurations()
     cy.get('#addTenantButton').click()
@@ -24,7 +24,7 @@ it('Global Configurations 002 - Click x to close popup', () => {
 
 })
 
-it('Global Configurations 002 - Click Cancel to close popup', () => {
+it('Global Configurations 004 - Click Cancel to close popup', () => {
         
 
     signInObj.goToGlobalConfigurations()
@@ -36,7 +36,7 @@ it('Global Configurations 002 - Click Cancel to close popup', () => {
 })
 
 
-it('Global Configurations 003 - Adding while skipping Message1', () => {
+it('Global Configurations 005 - Adding while skipping Message1', () => {
 
 
     signInObj.goToGlobalConfigurations()
@@ -55,7 +55,7 @@ it('Global Configurations 003 - Adding while skipping Message1', () => {
 
 })
 
-it('Global Configurations 004 - Adding while skipping Message2', () => {
+it('Global Configurations 006 - Adding while skipping Message2', () => {
 
 
     signInObj.goToGlobalConfigurations()
@@ -75,7 +75,7 @@ it('Global Configurations 004 - Adding while skipping Message2', () => {
 })
 
 
-it('Global Configurations 005 - Adding while skipping Notification text', () => {
+it('Global Configurations 007 - Adding while skipping Notification text', () => {
 
 
     signInObj.goToGlobalConfigurations()
@@ -94,7 +94,7 @@ it('Global Configurations 005 - Adding while skipping Notification text', () => 
     
 })
 
-it('Global Configurations 006 - Adding while skipping Join Msg', () => {
+it('Global Configurations 008 - Adding while skipping Join Msg', () => {
 
 
     signInObj.goToGlobalConfigurations()
@@ -114,7 +114,7 @@ it('Global Configurations 006 - Adding while skipping Join Msg', () => {
 })
 
 
-it('Global Configurations 007 - Adding while skipping Region', () => {
+it('Global Configurations 009 - Adding while skipping Region', () => {
 
 
     signInObj.goToGlobalConfigurations()
@@ -133,7 +133,7 @@ it('Global Configurations 007 - Adding while skipping Region', () => {
     
 })
 
-it('Global Configurations 008 - Adding while skipping Visitor app Version', () => {
+it('Global Configurations 010 - Adding while skipping Visitor app Version', () => {
 
 
     signInObj.goToGlobalConfigurations()
@@ -154,7 +154,7 @@ it('Global Configurations 008 - Adding while skipping Visitor app Version', () =
 })
 
 
-it('Global Configurations 008 - Adding while skipping Security app Version', () => {
+it('Global Configurations 011 - Adding while skipping Security app Version', () => {
 
     
     signInObj.goToGlobalConfigurations()

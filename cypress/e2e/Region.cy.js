@@ -38,7 +38,7 @@ it('Region 004 - Click Cancel to close popup', () => {
 })
 
 
-it('Region 005- Add Region without a nam' , () => 
+it('Region 005- Add Region without a name' , () => 
     {
         signInObj.goToRegion()
         cy.get('#addTenantButton').click()
@@ -70,7 +70,7 @@ it.skip('Region 007- Edit the Region', () => {
     const regionNumber = Math.floor(Math.random() * 50) + 1;
     cy.get('#updateRegionRequest_Name').type('Test Region'+regionNumber)
     cy.get('#editRegionSubmit').click()
-
+    
 
 })
 
